@@ -69,16 +69,19 @@
 }
 
 @media only screen and (min-width: 1024px) {
+  .card {
+    width: 24%;
+  }
   .card.hero {
     width: unset;
   }
 }
 
 @media only screen and (min-width: 1224px) {
-  .card {
-    width: min-content;
-  }
 }
 
 @media only screen and (min-width: 1440px) {
+  .card {
+    width: min-content;
+  }
 }

@@ -6,14 +6,10 @@
   z-index: 10;
 }
 
-.navbar_wrapper {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .navbar {
-  padding-bottom: 22.5px;
-  padding-top: 22.5px;
+  /* Padding values of Y axis is 15px in Figma. But I did not use 15px because 45,30 and 22.5px is allowed in the Case Study Mail */
+
+  padding: 22.5px;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
@@ -54,8 +50,6 @@
     display: flex;
     justify-content: space-between;
     border-radius: 4px;
-    padding-left: 22.5px;
-    padding-right: 22.5px;
   }
 
   .links a:first-of-type {
@@ -64,10 +58,6 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .navbar_wrapper {
-    padding-left: 22.5px;
-    padding-right: 22.5px;
-  }
 }
 
 @media only screen and (min-width: 1440px) {

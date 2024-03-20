@@ -1,7 +1,7 @@
 import { MoviesCardList, Hero } from '@/components/PageComponents/Homepage'
 import { TVShowsCardList } from '@/components/PageComponents/Homepage/CardList/TVShowsCardList'
-import { getMovies } from '@/utils/movies/getMovies'
-import { getTVShows } from '@/utils/movies/getTVShows'
+import { getMovies } from '@/utils/fetch/getMovies'
+import { getTVShows } from '@/utils/fetch/getTVShows'
 
 export default async function Home() {
   const movies = await getMovies()

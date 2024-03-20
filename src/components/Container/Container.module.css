@@ -5,12 +5,6 @@
   padding-right: 22.5px;
 }
 
-@media only screen and (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
 @media only screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -19,12 +13,14 @@
 
 @media only screen and (min-width: 1024px) {
   .container {
-    max-width: 1024px;
+    max-width: 968px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .container {
     max-width: 1230px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }

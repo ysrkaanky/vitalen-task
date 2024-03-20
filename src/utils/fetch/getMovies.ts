@@ -13,7 +13,7 @@ export async function getMovies() {
     options
   )
     .then((response) => response.json())
-    .then(({ results }: MovieDetailsResponse) => {
+    .then(({ results }: MovieListDetailsResponse) => {
       return results
     })
     .catch((err) => {

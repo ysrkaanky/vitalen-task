@@ -15,6 +15,8 @@ export function MoviesCardList({ movies, title }: MoviesCardListProps) {
             rating={movie.vote_average}
             title={movie.title}
             key={movie.id}
+            id={movie.id}
+            type='movie'
           />
         ))}
       </div>
@@ -24,5 +26,5 @@ export function MoviesCardList({ movies, title }: MoviesCardListProps) {
 
 interface MoviesCardListProps {
   title: string
-  movies: MovieDetails[]
+  movies: MovieListDetails[]
 }

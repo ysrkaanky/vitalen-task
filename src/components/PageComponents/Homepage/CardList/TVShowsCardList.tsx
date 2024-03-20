@@ -15,6 +15,8 @@ export function TVShowsCardList({ shows, title }: TVShowsCardListProps) {
             rating={show.vote_average}
             title={show.name}
             key={show.id}
+            id={show.id}
+            type='tvShow'
           />
         ))}
       </div>

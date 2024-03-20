@@ -6,27 +6,27 @@ import { HeroText } from './HeroText'
 import { Container } from '@/components/Container'
 
 interface HeroProps {
-  movies: MovieDetails[]
+  movies: MovieListDetails[]
 }
 
 export async function Hero({ movies }: HeroProps) {
   return (
-    <div className={styles.hero}>
-      <Container wrapper='section'>
-        <HeroBackground />
-        <div className={styles.hero_wrapper}>
-          <HeroText />
-          {movies.map((movie) => (
-            <PosterCard
-              position='hero'
-              poster_path={movie.poster_path}
-              rating={movie.vote_average}
-              title={movie.title}
-              key={movie.id}
-            />
-          ))}
-        </div>
-      </Container>
-    </div>
+    <Container wrapper='section' className={styles.hero_container}>
+      <HeroBackground />
+      <div className={styles.hero_wrapper}>
+        <HeroText />
+        {movies.map((movie) => (
+          <PosterCard
+            position='hero'
+            poster_path={movie.poster_path}
+            rating={movie.vote_average}
+            title={movie.title}
+            key={movie.id}
+            id={movie.id}
+            type='movie'
+          />
+        ))}
+      </div>
+    </Container>
   )
 }

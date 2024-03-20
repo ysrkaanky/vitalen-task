@@ -2,15 +2,31 @@ import { config } from '@/config'
 import Image from 'next/image'
 import React from 'react'
 import styles from './posterCard.module.css'
+import Link from 'next/link'
+
+interface PosterCardProps {
+  title: string
+  poster_path: string
+  rating: number
+  position: 'hero' | 'list'
+  type: 'movie' | 'tvShow'
+  id: number
+}
 
 export function PosterCard({
   title,
   poster_path,
   rating,
   position,
+  id,
+  type,
 }: PosterCardProps) {
   return (
-    <div className={`${styles.card} ${styles[position]}`}>
+    <Link
+      href={`/${type === 'tvShow' ? 'shows' : 'movies'}/${encodeURIComponent(
+        title.toLowerCase()
+      )}-${id}`}
+      className={`${styles.card} ${styles[position]}`}>
       <div className={styles.card_inner}>
         <PosterCardRating />
         <Image
@@ -23,7 +39,7 @@ export function PosterCard({
           {title}
         </p>
       </div>
-    </div>
+    </Link>
   )
   function PosterCardRating() {
     return (
@@ -32,11 +48,4 @@ export function PosterCard({
       </p>
     )
   }
-}
-
-interface PosterCardProps {
-  title: string
-  poster_path: string
-  rating: number
-  position: 'hero' | 'list'
 }

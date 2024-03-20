@@ -1,0 +1,1 @@
+export { DetailPageWrapper } from './DetailPageWrapper'

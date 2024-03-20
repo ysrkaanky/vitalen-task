@@ -2,8 +2,11 @@
 import React from 'react'
 import styles from './header.module.css'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export function NavLinks() {
+  const isHomepage = usePathname() === '/'
+
   function handleNavLinkClick(e: React.SyntheticEvent) {
     // I need this function instead of passing the target element's id as the href attribute to anchor elements because the CardList components' titles are not visible due to the fixed header. I extracted the header's height from the element's distance to the top.
     e.preventDefault()
@@ -27,12 +30,21 @@ export function NavLinks() {
   }
   return (
     <div className={styles.links}>
-      <Link onClick={handleNavLinkClick} href={'#'} data-target='tvShows'>
-        Popular TV Series
-      </Link>
-      <Link onClick={handleNavLinkClick} href={'#'} data-target='movies'>
-        Popular Popular Movies
-      </Link>
+      {isHomepage && (
+        <>
+          <Link onClick={handleNavLinkClick} href={'#'} data-target='tvShows'>
+            Popular TV Series
+          </Link>
+          <Link onClick={handleNavLinkClick} href={'#'} data-target='movies'>
+            Popular Popular Movies
+          </Link>
+        </>
+      )}
+      {!isHomepage && (
+        <>
+          <Link href={'/'}>Go Back To Homepage</Link>
+        </>
+      )}
     </div>
   )
 }
