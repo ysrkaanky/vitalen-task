@@ -26,5 +26,5 @@ export function TVShowsCardList({ shows, title }: TVShowsCardListProps) {
 
 interface TVShowsCardListProps {
   title: string
-  shows: TVShowDetails[]
+  shows: TVShowListDetails[]
 }
