@@ -3,15 +3,24 @@
   top: 0;
   right: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
 }
+
+.navbar_wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .navbar {
+  padding-bottom: 22.5px;
+  padding-top: 22.5px;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.63) 0%,
     rgba(255, 255, 255, 0) 100%
   );
+  backdrop-filter: blur(8px);
 }
 
 .logo {
@@ -20,7 +29,6 @@
   font-weight: 500;
   line-height: 30px;
   font-size: 25px;
-  padding-top: 10px;
   color: rgba(36, 18, 58, 1);
 }
 
@@ -28,6 +36,39 @@
   display: flex;
   justify-content: space-around;
   padding-top: 7.5px;
-  padding-bottom: 10px;
   color: rgba(112, 124, 180, 1);
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    margin: 22.5px;
+    width: calc(100% - 45px);
+  }
+  .navbar {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.63) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+    padding-left: 22.5px;
+    padding-right: 22.5px;
+  }
+
+  .links a:first-of-type {
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .navbar_wrapper {
+    padding-left: 22.5px;
+    padding-right: 22.5px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
 }

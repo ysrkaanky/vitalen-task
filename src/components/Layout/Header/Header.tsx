@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './header.module.css'
 import Link from 'next/link'
+import { Container } from '@/components/Container'
+import { NavLinks } from './NavLinks'
 export function Header() {
   return (
     <header className={styles.header}>
@@ -11,14 +13,13 @@ export function Header() {
 
 function NavBar() {
   return (
-    <nav className={styles.navbar}>
-      <Link className={styles.logo} href={'/'}>
-        Logo
-      </Link>
-      <div className={styles.links}>
-        <Link href={'/'}>Popular TV Series</Link>
-        <Link href={'/'}>Popular Popular Movies</Link>
-      </div>
-    </nav>
+    <Container wrapper='div' className={styles.navbar_wrapper}>
+      <nav className={styles.navbar}>
+        <Link className={styles.logo} href={'/'}>
+          Logo
+        </Link>
+        <NavLinks />
+      </nav>
+    </Container>
   )
 }

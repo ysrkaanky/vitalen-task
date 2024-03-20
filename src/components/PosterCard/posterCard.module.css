@@ -1,0 +1,84 @@
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.card_inner {
+  width: 238px;
+  height: 383px;
+  position: relative;
+  margin-top: 45px;
+  margin-bottom: 22.5px;
+  -webkit-box-shadow: 0px 0px 20px 6px rgba(255, 255, 255, 0.1);
+  -moz-box-shadow: 0px 0px 20px 6px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 20px 6px rgba(255, 255, 255, 0.1);
+}
+
+.card_text_container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 96px;
+  color: white;
+  line-height: 19.5px;
+  padding: 0 2ch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.card_text_container.hero {
+  background-color: rgba(0, 0, 0, 0.69);
+}
+
+.card_text_container.list {
+  background-color: rgba(36, 18, 58, 0.76);
+}
+
+.card_rating {
+  position: absolute;
+  bottom: 100%;
+  width: 93px;
+  height: 34px;
+  bottom: 100%;
+  right: 0;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_rating.hero {
+  background-color: white;
+}
+.card_rating.list {
+  background-color: #24123a;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 50%;
+  }
+  .card.hero {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .card.hero {
+    width: unset;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .card {
+    width: min-content;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+}
