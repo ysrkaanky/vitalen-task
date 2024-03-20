@@ -1,0 +1,36 @@
+.cast_title {
+  margin-bottom: 22.5px;
+}
+
+.cast_card {
+  display: flex;
+  margin-bottom: 22.5px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cast_card-image_container {
+  width: 25%;
+  padding-top: 25%;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.cast_card img {
+  object-fit: cover;
+}
+
+.cast_card_text_container {
+  padding: 0 22.5px;
+  width: 75%;
+}
+
+.cast_card_text_container p {
+  text-align: center;
+}
+
+.cast_card_text_container p:first-of-type,
+.cast_card_text_container p:last-of-type {
+  font-weight: 700;
+}
