@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { Footer, Header } from '@/components/Layout'
-import { ScrollContextProvider } from '@/context/ScrollContext'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,11 +15,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className='font-montserrat'>
-        <ScrollContextProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </ScrollContextProvider>
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )

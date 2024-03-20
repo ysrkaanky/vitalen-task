@@ -9,7 +9,7 @@ export async function getMovies() {
   } satisfies RequestInit
 
   const movies = await fetch(
-    'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&vote_average.gte=8',
+    'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1',
     options
   )
     .then((response) => response.json())

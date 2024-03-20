@@ -9,11 +9,11 @@ export async function getTVShows() {
   } satisfies RequestInit
 
   const tvShows = await fetch(
-    'https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=en-US&page=1&sort_by=popularity.desc',
+    'https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1',
     options
   )
     .then((response) => response.json())
-    .then(({ results }: TVShowDetailsResponse) => {
+    .then(({ results }: TVShowListDetailsResponse) => {
       return results
     })
     .catch((err) => {

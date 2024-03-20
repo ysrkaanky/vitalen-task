@@ -21,3 +21,34 @@
   position: relative;
   padding-top: 150%;
 }
+
+@media only screen and (min-width: 640px) {
+}
+
+@media only screen and (min-width: 768px) {
+  .image_container {
+    width: 75%;
+    padding-top: 113%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero_background {
+    height: 800px;
+  }
+  .image_container {
+    width: 60%;
+    padding-top: 90%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .hero_background {
+    height: 900px;
+  }
+  .image_container {
+    width: 40%;
+    padding-top: 60%;
+  }
+}

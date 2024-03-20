@@ -5,13 +5,32 @@ import { getTVShows } from '@/utils/fetch/getTVShows'
 
 export default async function Home() {
   const movies = await getMovies()
-  const heroMovies = movies.slice(0, 2)
-  const popularMovies = movies.slice(2, 6)
-  const TVShows = (await getTVShows()).slice(0, 4)
-
+  const tvShows = await getTVShows()
+  const heroMovie = movies[0]
+  const heroTvShow = tvShows[0]
+  const popularMovies = movies.slice(1, 9)
+  const TVShows = tvShows.slice(1, 9)
+  heroTvShow
   return (
     <>
-      <Hero movies={heroMovies} />
+      <Hero
+        contents={[
+          {
+            id: heroMovie.id,
+            poster_path: heroMovie.poster_path,
+            title: heroMovie.title,
+            type: 'movie',
+            vote_average: heroMovie.vote_average,
+          },
+          {
+            type: 'tvShow',
+            title: heroTvShow.name,
+            id: heroTvShow.id,
+            poster_path: heroTvShow.poster_path,
+            vote_average: heroTvShow.vote_average,
+          },
+        ]}
+      />
       <MoviesCardList movies={popularMovies} title='Popular Movies' />
       <TVShowsCardList shows={TVShows} title='Popular TV Series' />
     </>

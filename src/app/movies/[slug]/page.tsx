@@ -21,7 +21,6 @@ export default async function MoviesPage({
       rating={movie.vote_average}
       releaseDate={movie.release_date}
       voteCount={movie.vote_count}
-      runtime={movie.runtime}
     />
   )
 }

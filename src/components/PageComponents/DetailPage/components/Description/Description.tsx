@@ -9,10 +9,8 @@ interface DescriptionProps {
 export function Description({ description }: DescriptionProps) {
   return (
     <div className={styles.description}>
-      <Container wrapper='div'>
-        <h2 className={styles.description_title}>Story Line</h2>
-        <p>{description}</p>
-      </Container>
+      <h2 className={styles.description_title}>Story Line</h2>
+      <p>{description}</p>
     </div>
   )
 }

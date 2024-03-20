@@ -1,8 +1,17 @@
+.cast_container {
+  margin-top: 30px;
+}
 .cast_title {
   margin-bottom: 22.5px;
+  text-align: center;
+}
+.cast_card_container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .cast_card {
+  width: 100%;
   display: flex;
   margin-bottom: 22.5px;
   align-items: center;
@@ -33,4 +42,45 @@
 .cast_card_text_container p:first-of-type,
 .cast_card_text_container p:last-of-type {
   font-weight: 700;
+}
+
+.button_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 45px 0;
+}
+.button_container button {
+  cursor: pointer;
+  background-color: rgb(25, 0, 39);
+  color: white;
+  padding: 12px 24px;
+  outline: none;
+  border-radius: 6px;
+  border: none;
+  font-weight: 700;
+  transition: background-color 200ms transform 50ms;
+}
+.button_container button:hover {
+  background-color: #523f5f;
+}
+.button_container button:active {
+  transform: translateY(1px);
+}
+@media only screen and (min-width: 640px) {
+}
+
+@media only screen and (min-width: 768px) {
+  .cast_card {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (min-width: 1440px) {
+  .cast_card {
+    width: 25%;
+  }
 }

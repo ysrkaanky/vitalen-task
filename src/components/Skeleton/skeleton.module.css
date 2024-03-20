@@ -1,0 +1,23 @@
+@keyframes skeleton-animation {
+  0% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.skeleton {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #a5a5a5;
+  animation: skeleton-animation 1s infinite ease-in-out;
+}

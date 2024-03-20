@@ -34,6 +34,7 @@ export function PosterCard({
           src={config.IMAGE_API_URL + poster_path}
           fill
           priority
+          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
         />
         <p className={`${styles.card_text_container} ${styles[position]}`}>
           {title}

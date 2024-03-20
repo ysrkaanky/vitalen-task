@@ -20,7 +20,7 @@ interface MovieListDetailsResponse {
   results: MovieListDetails[]
 }
 
-interface TVShowDetails {
+interface TVShowListDetails {
   adult: boolean
   backdrop_path: string
   genre_ids: number[]
@@ -37,9 +37,9 @@ interface TVShowDetails {
   vote_count: number
 }
 
-interface TVShowDetailsResponse {
+interface TVShowListDetailsResponse {
   page: number
-  results: TVShowDetails[]
+  results: TVShowListDetails[]
 }
 // DETAILS PAGE
 interface Genre {
@@ -63,35 +63,6 @@ interface SpokenLanguage {
   english_name: string
   iso_639_1: string
   name: string
-}
-
-interface MovieDetailsResponse {
-  adult: boolean
-  backdrop_path: string | null
-  belongs_to_collection: string | null
-  budget: number
-  genres: Genre[]
-  homepage: string | null
-  id: number
-  imdb_id: string | null
-  original_language: string
-  original_title: string
-  overview: string | null
-  popularity: number
-  poster_path: string | null
-  production_companies: ProductionCompany[]
-  production_countries: ProductionCountry[]
-  release_date: string
-  revenue: number
-  runtime: number | null
-  spoken_languages: SpokenLanguage[]
-  status: string
-  tagline: string | null
-  title: string
-  video: boolean
-  vote_average: number
-  vote_count: number
-  credits: Credits
 }
 
 interface CastMember {
@@ -126,7 +97,68 @@ interface CrewMember {
 interface Credits {
   id: number
   cast: CastMember[]
-  crew: CrewMember[]
+}
+
+interface MovieDetailsResponse {
+  adult: boolean
+  backdrop_path: string | null
+  belongs_to_collection: string | null
+  budget: number
+  genres: Genre[]
+  homepage: string | null
+  id: number
+  imdb_id: string | null
+  original_language: string
+  original_title: string
+  overview: string | null
+  popularity: number
+  poster_path: string | null
+  production_companies: ProductionCompany[]
+  production_countries: ProductionCountry[]
+  release_date: string
+  revenue: number
+  runtime: number | null
+  spoken_languages: SpokenLanguage[]
+  status: string
+  tagline: string | null
+  title: string
+  video: boolean
+  vote_average: number
+  vote_count: number
+  credits: Credits
+}
+
+interface TVShowDetailsResponse {
+  id: number
+  credit_id: string
+  name: string
+  gender: number
+  profile_path: string
+  episode_run_time: number[]
+  first_air_date: string
+  genres: Genre[]
+  homepage: string
+  in_production: boolean
+  languages: string[]
+  last_air_date: string
+  number_of_episodes: number
+  number_of_seasons: number
+  origin_country: string[]
+  original_language: string
+  original_name: string
+  overview: string
+  popularity: number
+  poster_path: string
+  production_companies: ProductionCompany[]
+  production_countries: ProductionCountry[]
+  seasons: Season[]
+  spoken_languages: SpokenLanguage[]
+  status: string
+  tagline: string
+  type: string
+  vote_average: number
+  vote_count: number
+  credits: Credits
 }
 
 interface DetailsPageProps {
