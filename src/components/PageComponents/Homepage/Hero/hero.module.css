@@ -8,6 +8,10 @@
   padding-bottom: 45px;
 }
 
+.hero_wrapper {
+  margin-top: 22.5px;
+}
+
 .hero_background {
   position: absolute;
   top: 0;
