@@ -1,13 +1,25 @@
 import { DetailPage } from '@/components/PageComponents/DetailPage'
 import { getImages } from '@/utils/fetch/getImages'
 import { getMovieDetails } from '@/utils/fetch/getMovieDetails'
+import { Metadata, ResolvingMetadata } from 'next'
 import React from 'react'
 
+export async function generateMetadata({
+  params,
+}: DetailsPageProps): Promise<Metadata> {
+  const id = Number(params.id)
+  if (!isFinite(id)) throw new Error('movie id must be an int')
+  const movie = await getMovieDetails(id)
+
+  return {
+    title: `Movie | ${movie.title}`,
+  }
+}
+
 export default async function MoviesPage({
-  params: { slug },
+  params: { id, name },
 }: DetailsPageProps) {
-  const parsedSlug = slug.split('-')
-  const movieId = Number(parsedSlug[parsedSlug.length - 1])
+  const movieId = Number(id)
   if (!isFinite(movieId)) throw new Error('movie id must be an int')
   const movie = await getMovieDetails(movieId)
 

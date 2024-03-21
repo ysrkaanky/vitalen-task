@@ -2,6 +2,11 @@ import { MoviesCardList, Hero } from '@/components/PageComponents/Homepage'
 import { TVShowsCardList } from '@/components/PageComponents/Homepage/CardList/TVShowsCardList'
 import { getMovies } from '@/utils/fetch/getMovies'
 import { getTVShows } from '@/utils/fetch/getTVShows'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'World of Movies & TV Series',
+}
 
 export default async function Home() {
   const movies = await getMovies()

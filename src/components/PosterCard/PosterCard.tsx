@@ -25,7 +25,7 @@ export function PosterCard({
     <Link
       href={`/${type === 'tvShow' ? 'shows' : 'movies'}/${encodeURIComponent(
         title.toLowerCase()
-      )}-${id}`}
+      )}/${id}`}
       className={`${styles.card} ${styles[position]}`}>
       <div className={styles.card_inner}>
         <PosterCardRating />

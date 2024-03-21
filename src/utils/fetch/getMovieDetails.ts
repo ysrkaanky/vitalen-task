@@ -1,14 +1,7 @@
-export async function getMovieDetails(id: number) {
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: `Bearer ${process.env.MOVIES_TOKEN}`,
-    },
-    cache: 'no-cache',
-  } satisfies RequestInit
+import options from './options'
 
-  const movieDetails = await fetch(
+export async function getMovieDetails(id: number) {
+  return fetch(
     `https://api.themoviedb.org/3/movie/${id}?append_to_response=credits&language=en-US`,
     options
   )
@@ -17,6 +10,4 @@ export async function getMovieDetails(id: number) {
     .catch((err) => {
       throw new Error(err)
     })
-
-  return movieDetails
 }

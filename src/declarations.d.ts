@@ -165,7 +165,7 @@ interface TVShowDetailsResponse {
 }
 
 interface DetailsPageProps {
-  params: { slug: string }
+  params: { name: string; id: string }
 }
 // DETAILS PAGE
 

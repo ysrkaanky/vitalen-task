@@ -1,11 +1,25 @@
 import { DetailPage } from '@/components/PageComponents/DetailPage'
 import { getImages } from '@/utils/fetch/getImages'
 import { getTVShowDetails } from '@/utils/fetch/getTVShowDetails'
+import { Metadata, ResolvingMetadata } from 'next'
 import React from 'react'
 
-export default async function Shows({ params: { slug } }: DetailsPageProps) {
-  const parsedSlug = slug.split('-')
-  const showId = Number(parsedSlug[parsedSlug.length - 1])
+export async function generateMetadata({
+  params,
+}: DetailsPageProps): Promise<Metadata> {
+  const id = Number(params.id)
+  if (!isFinite(id)) throw new Error('movie id must be an int')
+  const show = await getTVShowDetails(id)
+
+  return {
+    title: `TV Show | ${show.name}`,
+  }
+}
+
+export default async function Shows({
+  params: { id, name },
+}: DetailsPageProps) {
+  const showId = Number(id)
   if (!isFinite(showId)) throw new Error('movie id must be an int')
   const show = await getTVShowDetails(showId)
   const images = await getImages({ id: showId, type: 'tv' })
