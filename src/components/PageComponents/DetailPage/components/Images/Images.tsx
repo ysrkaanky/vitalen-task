@@ -6,6 +6,7 @@ import { config } from '@/config'
 import { Container } from '@/components/Container'
 import Image from 'next/image'
 import { Skeleton } from '@/components/Skeleton'
+import { Title } from '../Title'
 
 interface ImagesProps {
   images: MovieImages
@@ -16,7 +17,7 @@ export function Images({ images, name }: ImagesProps) {
   return (
     <div>
       <Container wrapper='div'>
-        <h2 className={styles.title}>Images</h2>
+        <Title>Images</Title>
         <div className={styles.images_wrapper}>
           {imageToDisplay.map((img, i) => {
             return <ImageContainer img={img} name={name} key={i} />

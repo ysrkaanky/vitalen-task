@@ -59,7 +59,7 @@
   border-radius: 6px;
   border: none;
   font-weight: 700;
-  transition: background-color 200ms transform 50ms;
+  transition: background-color 200ms, transform 50ms;
 }
 .button_container button:hover {
   background-color: #523f5f;

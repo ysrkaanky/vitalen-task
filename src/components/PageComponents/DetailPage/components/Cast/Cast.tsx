@@ -5,6 +5,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import styles from './Cast.module.css'
 import { Skeleton } from '@/components/Skeleton'
+import { Title } from '../Title'
 export function Cast({ cast }: { cast: CastMember[] }) {
   const [visibleCastCount, setVisibleCastCount] = useState(
     cast.length < 4 ? cast.length : 4
@@ -21,7 +22,7 @@ export function Cast({ cast }: { cast: CastMember[] }) {
   return (
     <div className={styles.cast_container}>
       <Container wrapper='div'>
-        <h2 className={styles.cast_title}>Cast</h2>
+        <Title>Cast</Title>
         <div className={styles.cast_card_container}>
           {visibleCast.map((castMember) => (
             <CastCard {...castMember} key={castMember.id} />

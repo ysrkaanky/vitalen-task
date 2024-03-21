@@ -3,6 +3,7 @@ import { PosterCard } from '@/components/PosterCard/PosterCard'
 import { getRecommendations } from '@/utils/fetch/getRecommendations'
 import React from 'react'
 import styles from './Recommendations.module.css'
+import { Title } from '../Title'
 export async function Recommendations({
   id,
   type,
@@ -16,7 +17,7 @@ export async function Recommendations({
   return (
     <div className={styles.container}>
       <Container wrapper='div'>
-        <h2 className={styles.title}>You Might Also Like</h2>
+        <Title>You Might Also Like</Title>
         <div className={styles.wrapper}>
           {recommendations.map((item) => {
             const title = getTitle(item)

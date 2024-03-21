@@ -29,13 +29,15 @@ export function PosterCard({
       className={`${styles.card} ${styles[position]}`}>
       <div className={styles.card_inner}>
         <PosterCardRating />
-        <Image
-          alt={title}
-          src={config.IMAGE_API_URL + poster_path}
-          fill
-          priority
-          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-        />
+        <div className={styles.image_container}>
+          <Image
+            alt={title}
+            src={config.IMAGE_API_URL + poster_path}
+            fill
+            priority
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+          />
+        </div>
         <p className={`${styles.card_text_container} ${styles[position]}`}>
           {title}
         </p>

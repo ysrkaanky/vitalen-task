@@ -2,10 +2,7 @@
   padding-bottom: 45px;
   padding-top: 45px;
 }
-.title {
-  margin-bottom: 22.5px;
-  text-align: center;
-}
+
 .wrapper {
   display: flex;
   flex-wrap: wrap;
