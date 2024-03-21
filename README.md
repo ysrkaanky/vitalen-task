@@ -34,20 +34,20 @@ Main technologies used in this project:
 
 2.  Navigate to the project directory:
     
-    
-    `cd vitalen-task` 
+    ```bash
+    cd vitalen-task` 
     
 3.  Install the required dependencies:
     
-    
-    `npm install` 
+    ```bash
+    npm install` 
     
 4.  Start the development server:
     
+     ```bash
+    npm start` 
     
-    `npm start` 
-    
-    This command will run the project at http://localhost:3000.
+   This command will run the project at http://localhost:3000.
 
 
   
@@ -83,18 +83,22 @@ Main technologies used in this project:
 ## Installation
 
 1. Clone the repository:
-   `git clone https://github.com/ysrkaanky/vitalen-task.git` 
+   ```bash
+   git clone https://github.com/ysrkaanky/vitalen-task.git` 
 
 2.  Navigate to the project directory:  
-    `cd vitalen-task` 
+    ```bash
+    cd vitalen-task` 
     
 3.  Install the required dependencies:
-    `npm install` 
+    ```bash
+    npm install` 
     
-4.  Start the development server:
-    `npm start` 
+5.  Start the development server:
+    ```bash
+    npm start` 
     
-    This command will run the project at http://localhost:3000.
+   This command will run the project at http://localhost:3000.
     
 
 ## Deployment
