@@ -13,7 +13,8 @@ export async function getRecommendations({
   )
     .then((response) => response.json())
     .then(
-      (response: MovieListDetailsResponse | TVShowDetailsResponse) => response
+      (response: MovieListDetailsResponse | TVShowListDetailsResponse) =>
+        response
     )
     .catch((err) => {
       throw new Error(err)
