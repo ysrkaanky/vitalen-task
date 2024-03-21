@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# TMDB Frontend
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project aims to create a movie and TV show website by fetching data from the TMDB API. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Homepage:**
+ - Displays the most popular movies and TV shows.
+ - Movie/show cards include title, poster, and rating.
+ - Clicking on each card directs to the respective movie/show detail page.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Movie/Show Detail Page:**
+ - Shows details of the selected movie or show.
+ - Includes information such as title, poster, genre, release date, and description.
+ - Lists cast members and recommendations like the show or movie.
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+Main technologies used in this project:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Next js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Installation
 
-## Deploy on Vercel
+1. Clone the repository:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone https://github.com/ysrkaanky/vitalen-task.git` 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2.  Navigate to the project directory:
+    
+    
+    `cd vitalen-task` 
+    
+3.  Install the required dependencies:
+    
+    
+    `npm install` 
+    
+4.  Start the development server:
+    
+    
+    `npm start` 
+    
+    This command will run the project at http://localhost:3000.
+
+
+  
+Sure, here's the updated Markdown text with the information about deploying the project on Vercel:
+
+markdownCopy code
+
+`# MoviesDB Frontend
+
+This project aims to create a movie and TV show website by fetching data from the MoviesDB API.
+
+## Features
+
+**Homepage:**
+ - Displays the most popular movies and TV shows.
+ - Movie/show cards include title, poster, and rating.
+ - Clicking on each card directs to the respective movie/show detail page.
+
+**Movie/Show Detail Page:**
+ - Shows details of the selected movie or show.
+ - Includes information such as title, poster, genre, release date, and description.
+ - Lists cast members and recommendations like the show or movie.
+
+## Technologies Used
+
+Main technologies used in this project:
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Next.js
+
+## Installation
+
+1. Clone the repository:
+   `git clone https://github.com/ysrkaanky/vitalen-task.git` 
+
+2.  Navigate to the project directory:  
+    `cd vitalen-task` 
+    
+3.  Install the required dependencies:
+    `npm install` 
+    
+4.  Start the development server:
+    `npm start` 
+    
+    This command will run the project at http://localhost:3000.
+    
+
+## Deployment
+
+This project is deployed on [Vercel](https://vercel.com/). You can view the porject live at [here](https://vitalen-task.vercel.app/)
