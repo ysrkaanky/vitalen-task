@@ -1,5 +1,6 @@
 import { MoviesCardList, Hero } from '@/components/PageComponents/Homepage'
 import { TVShowsCardList } from '@/components/PageComponents/Homepage/CardList/TVShowsCardList'
+import { Scroller } from '@/components/PageComponents/Homepage/Scroller'
 import { getMovies } from '@/utils/fetch/getMovies'
 import { getTVShows } from '@/utils/fetch/getTVShows'
 import { Metadata } from 'next'
@@ -15,9 +16,9 @@ export default async function Home() {
   const heroTvShow = tvShows[0]
   const popularMovies = movies.slice(1, 9)
   const TVShows = tvShows.slice(1, 9)
-  heroTvShow
   return (
     <>
+      <Scroller />
       <Hero
         contents={[
           {

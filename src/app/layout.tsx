@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import './globals.css'
 import { Footer, Header } from '@/components/Layout'
+import ScrollContextProvider from '@/context/ScrollContext'
 
 export const metadata: Metadata = {
   icons: {
@@ -16,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className='font-montserrat'>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ScrollContextProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ScrollContextProvider>
       </body>
     </html>
   )
