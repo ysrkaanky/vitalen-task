@@ -5,6 +5,10 @@
   width: 100%;
   z-index: 10;
 }
+.navbar_wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 .navbar {
   /* Padding values of Y axis is 15px in Figma. But I did not use 15px because 45,30 and 22.5px is allowed in the Case Study Mail */
@@ -66,4 +70,8 @@
 }
 
 @media only screen and (min-width: 1440px) {
+  .navbar_wrapper {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
 }

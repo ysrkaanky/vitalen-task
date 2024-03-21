@@ -20,13 +20,17 @@ export function Information({
   releaseDate,
   productionCompany,
 }: InformationProps) {
+  const formatter = new Intl.DateTimeFormat('en-EN', { dateStyle: 'long' })
   return (
     <div className={styles.information}>
       <DataDisplay
         data={` ${rating.toFixed(1)}/10 out of ${voteCount} rates`}
         type='rating'
       />
-      <DataDisplay data={releaseDate} type='releaseDate' />
+      <DataDisplay
+        data={formatter.format(new Date(releaseDate))}
+        type='releaseDate'
+      />
       <DataDisplay data={productionCompany.name} type='productionCompany' />
     </div>
   )

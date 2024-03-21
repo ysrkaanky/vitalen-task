@@ -1,4 +1,5 @@
 import { DetailPage } from '@/components/PageComponents/DetailPage'
+import { getImages } from '@/utils/fetch/getImages'
 import { getMovieDetails } from '@/utils/fetch/getMovieDetails'
 import React from 'react'
 
@@ -10,6 +11,7 @@ export default async function MoviesPage({
   if (!isFinite(movieId)) throw new Error('movie id must be an int')
   const movie = await getMovieDetails(movieId)
 
+  const images = await getImages({ id: movieId, type: 'movie' })
   return (
     <DetailPage
       cast={movie.credits.cast}
@@ -21,6 +23,9 @@ export default async function MoviesPage({
       rating={movie.vote_average}
       releaseDate={movie.release_date}
       voteCount={movie.vote_count}
+      images={images}
+      contentType='movie'
+      contentId={movieId}
     />
   )
 }

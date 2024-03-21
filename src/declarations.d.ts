@@ -1,3 +1,5 @@
+type ContentType = 'movie' | 'tv'
+
 interface MovieListDetails {
   adult: boolean
   backdrop_path: string
@@ -126,6 +128,7 @@ interface MovieDetailsResponse {
   vote_average: number
   vote_count: number
   credits: Credits
+  recommendations
 }
 
 interface TVShowDetailsResponse {
@@ -165,3 +168,22 @@ interface DetailsPageProps {
   params: { slug: string }
 }
 // DETAILS PAGE
+
+// IMAGES
+interface ImageDetails {
+  aspect_ratio: number
+  height: number
+  iso_639_1: string
+  file_path: string
+  vote_average: number
+  vote_count: number
+  width: number
+}
+
+interface MovieImages {
+  id: number
+  backdrops: ImageDetails[]
+  logos: ImageDetails[]
+  posters: ImageDetails[]
+}
+// IMAGES

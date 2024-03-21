@@ -42,13 +42,20 @@ export function NavLinks() {
       )}
       {!isHomepage && (
         <>
+          <Link href={'/'}>Homepage</Link>
           <Link
             href={'#'}
             onClick={(e) => {
               e.preventDefault()
-              router.back()
+              if (!document.referrer) {
+                router.push('/')
+                return
+              }
+              const referrer = new URL(document.referrer)
+              const shouldGoBack = window.location.origin === referrer.origin
+              shouldGoBack ? router.back() : router.push('/')
             }}>
-            Go Back To Homepage
+            Go Back
           </Link>
         </>
       )}

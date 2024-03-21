@@ -5,6 +5,8 @@ import { Description } from './components/Description'
 import { Cast } from './components/Cast'
 import styles from './DetailsPage.module.css'
 import { Container } from '@/components/Container'
+import { Images } from './components/Images'
+import { Recommendations } from './components/Recommendations'
 interface DetailPageProps {
   name: string
   posterPath: string | null
@@ -15,6 +17,9 @@ interface DetailPageProps {
   rating: number
   voteCount: number
   cast: CastMember[]
+  images: MovieImages
+  contentType: ContentType
+  contentId: number
 }
 
 export function DetailPage(props: DetailPageProps) {
@@ -39,6 +44,8 @@ export function DetailPage(props: DetailPageProps) {
         <Description description={props.description} />
       </Container>
       <Cast cast={props.cast} />
+      <Images images={props.images} name={props.name} />
+      <Recommendations id={props.contentId} type={props.contentType} />
     </>
   )
 }

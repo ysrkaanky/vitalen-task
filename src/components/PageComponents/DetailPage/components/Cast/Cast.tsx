@@ -6,7 +6,9 @@ import React, { useState } from 'react'
 import styles from './Cast.module.css'
 import { Skeleton } from '@/components/Skeleton'
 export function Cast({ cast }: { cast: CastMember[] }) {
-  const [visibleCastCount, setVisibleCastCount] = useState(4)
+  const [visibleCastCount, setVisibleCastCount] = useState(
+    cast.length < 4 ? cast.length : 4
+  )
   const visibleCast = cast.slice(0, visibleCastCount)
   const isButtonVisible = visibleCastCount !== cast.length
 
@@ -14,6 +16,8 @@ export function Cast({ cast }: { cast: CastMember[] }) {
     const targetCount = visibleCastCount + 4
     setVisibleCastCount(targetCount < cast.length ? targetCount : cast.length)
   }
+  // If movie/tv show do not have any cast member in moviesdb, this component will not render.
+  if (cast.length === 0) return <></>
   return (
     <div className={styles.cast_container}>
       <Container wrapper='div'>
