@@ -20,14 +20,10 @@ export default function ScrollContextProvider({
     }
   }, [isHomepage])
 
-  React.useEffect(() => {
-    const scrollEventListener = () => {
-      handleScroll()
-    }
-
-    window.addEventListener('scroll', scrollEventListener)
+  React.useLayoutEffect(() => {
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('scroll', scrollEventListener)
+      window.removeEventListener('scroll', handleScroll)
     }
   }, [handleScroll])
 
