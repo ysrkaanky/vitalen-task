@@ -1,8 +1,8 @@
 
 
-# MoviesDB Frontend
+# TMDB Frontend
 
-This project aims to create a movie and TV show website by fetching data from the MoviesDB API. 
+This project aims to create a movie and TV show website by fetching data from the TMDB API. 
 
 ## Features
 
