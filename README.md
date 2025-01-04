@@ -2,6 +2,7 @@
 
 # TMDB Frontend
 
+See the project on action [here](https://vitalen-task.vercel.app).
 This project aims to create a movie and TV show website by fetching data from the TMDB API. 
 
 ## Features
